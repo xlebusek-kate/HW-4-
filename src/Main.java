@@ -1,49 +1,44 @@
 public class Main {
     public static void main(String[] args) {
         // Задание номер 1
-        byte clientOS;
-        switch (clientOS) {
-            case 0:
-                System.out.println(" Установите версию приложения для iOS по ссылке ");
-                break;
-            case 1:
-                System.out.println(" Установите версию приложения для Android по ссылке");
-                break;
-            default:
-                System.out.println(" Error ");
+        byte clientOS = 1;
+        if (clientOS == 1) {
+            System.out.println(" Установите версию приложения для Android по ссылке");
+        } else if (clientOS == 0) {
+            System.out.println(" Установите версию приложения для iOS по ссылке ");
+        } else {
+            System.out.println(" Error ");
         }
         // Задание номер 2
+        clientOS = 2;
         short clientDeviceYear = 2015;
-        switch (clientOS) {
-            case 0:
-                if (clientDeviceYear >= 2015) {
-                    System.out.println(" Установите версию приложения для iOS по ссылке ");
-                } else {
-                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                }
-                break;
-            case 1:
-                if (clientDeviceYear >= 2015) {
-                    System.out.println(" Установите версию приложения для Android по ссылке");
-                } else {
-                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                }
-                break;
-            default:
-                System.out.println(" Error ");
+        if (clientOS == 0) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println(" Установите версию приложения для iOS по ссылке ");
+            } else {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            }
+        } else if (clientOS == 1) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println(" Установите версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+        } else {
+            System.out.println(" Error ");
         }
         // Задание номер 3
         short year = 2021;
-        if (year <= 1584) {
-            System.out.println(" Ошибка ");
-        } else if (year % 400 == 0) {
-            System.out.println(year + " год не является високосным ");
-        } else if (year % 100 == 0) {
-            System.out.println(year + " год не является високосным ");
-        } else if (year % 4 != 0) {
-            System.out.println(year + " год не является високосным ");
+        if (year >= 1584) {
+            if (year % 4 == 0 && year % 100 != 0) {
+                System.out.println(year + " год является високостным");
+            } else if (year % 4 == 0 && year % 100 != 0) {
+                System.out.println(year + " год является високостным");
+            } else {
+                System.out.println(year + " год не является високостным");
+            }
         } else {
-            System.out.println(year + " год является високосным ");
+            System.out.println(" Error ");
         }
         // Задание номер 4
         int deliveryDistance = 60;
@@ -57,7 +52,7 @@ public class Main {
             System.out.println("Ошибка");
         }
         // Задание номер 5
-        byte monthNumber = 2;
+        byte monthNumber = 9;
         switch (monthNumber) {
             case 12:
             case 1:
