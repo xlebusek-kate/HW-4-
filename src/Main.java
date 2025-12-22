@@ -25,16 +25,14 @@ public class Main {
         }
         // Задание номер 3
         short year = 2021;
-        if (year >= 1584) {
-            if (year % 4 == 0 && year % 100 != 0) {
-                System.out.println(year + " год является високостным");
-            } else if (year % 400 == 0 && year % 100 != 0) {
-                System.out.println(year + " год является високостным");
-            } else {
-                System.out.println(year + " год не является високостным");
-            }
+        if (year % 4 == 0 && year % 100 != 0 && year >= 1584) {
+            System.out.println(year + " год является високостным");
+        } else if (year % 400 == 0 && year % 100 != 0 && year >= 1584) {
+            System.out.println(year + " год является високостным");
+        } else if (year < 1584) {
+            System.out.println("Ошибка");
         } else {
-            System.out.println(" Error ");
+            System.out.println(year + " год не является високостным");
         }
         // Задание номер 4
         int deliveryDistance = 60;
@@ -47,6 +45,7 @@ public class Main {
         } else {
             System.out.println("Ошибка");
         }
+
         // Задание номер 5
         byte monthNumber = 9;
         switch (monthNumber) {
